@@ -61,18 +61,18 @@ The underlying model is trained on a comprehensive phishing dataset. Multiple mo
 
 | Model | Accuracy | F1 Score | Recall | Precision |
 | :--- | :---: | :---: | :---: | :---: |
-| **Gradient Boosting Classifier (Used)** | **0.974** | **0.977** | **0.994** | **0.986** |
-| CatBoost Classifier | 0.972 | 0.975 | 0.994 | 0.989 |
-| Multi-layer Perceptron | 0.969 | 0.973 | 0.995 | 0.981 |
-| Random Forest | 0.967 | 0.971 | 0.993 | 0.990 |
-| Support Vector Machine | 0.964 | 0.968 | 0.980 | 0.965 |
-| Decision Tree | 0.960 | 0.964 | 0.991 | 0.993 |
-| K-Nearest Neighbors | 0.956 | 0.961 | 0.991 | 0.989 |
-| Logistic Regression | 0.934 | 0.941 | 0.943 | 0.927 |
-| Naive Bayes Classifier | 0.605 | 0.454 | 0.292 | 0.997 |
+| **CatBoost Classifier** | **0.951** | **0.950** | **0.997** | **0.997** |
+| Random Forest | 0.945 | 0.951 | 0.995 | 0.998 |
+| Gradient Boosting Classifier (Used in App) | 0.941 | 0.940 | 0.991 | 0.991 |
+| Decision Tree | 0.933 | 0.940 | 1.000 | 1.000 |
+| Multi-layer Perceptron | 0.883 | 0.883 | 0.880 | 0.880 |
+| Logistic Regression | 0.880 | 0.893 | 0.900 | 0.890 |
+| Naive Bayes Classifier | 0.818 | 0.814 | 0.711 | 0.950 |
+| K-Nearest Neighbors | 0.630 | 0.655 | 1.000 | 1.000 |
 
 *Key Takeaways:*
-- The **Gradient Boosting Classifier** yields the highest accuracy of **97.4%** and is selected for active predictions in production.
+- The **CatBoost Classifier** achieved the highest accuracy of **95.1%** during model evaluation in the Jupyter notebook.
+- The **Gradient Boosting Classifier** (94.1% accuracy) is loaded in production via `newmodel.pkl` for real-time predictions.
 - Important features used to identify phishing attempts include `HTTPS`, `AnchorURL` percentage, and `WebsiteTraffic` patterns.
 
 ---
